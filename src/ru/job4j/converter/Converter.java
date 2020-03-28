@@ -1,38 +1,28 @@
 package ru.job4j.converter;
 
 public class Converter {
-    // формула перевода рублей в евро.
+
+
     public static int rubleToEuro(int value) {
-        int rsl = value / 70;
-        return rsl;
+        return value / 70;
     }
 
-    // формула перевода рублей в доллоры.
+
     public static int rubleToDollar(int value) {
-        int rsl = value / 60;
-        return rsl;
-    }
-
-    // формула перевода евро в рубли.
-    public static int euroToRuble(int value) {
-        int rsl = value * 70;
-        return rsl;
-    }
-
-    // формула перевода долларов в рубли.
-    public static int dollarToRuble(int value) {
-        int rsl = value * 60;
-        return rsl;
+        return value / 60;
     }
 
     public static void main(String[] args) {
-        int rubleEuro = Converter.rubleToEuro(140);
-        int rubleDollar = Converter.rubleToDollar(140);
-        int euroRuble = Converter.euroToRuble(140);
-        int dollarRuble = Converter.dollarToRuble(140);
-        System.out.println("140 рублей = " + rubleEuro + " евро.");
-        System.out.println("140 рублей = " + rubleDollar + " доллара.");
-        System.out.println("140 евро = " + euroRuble + " рублей.");
-        System.out.println("140 долларов = " + dollarRuble + " рублей.");
+        int in = 140;
+        int expected = 2;
+        int out = rubleToEuro(in);
+        boolean passed = expected == out;
+        System.out.println("140 rubles are 2. Test result : " + passed);
+
+        int in2 = 120;
+        int expected2 = 2;
+        int out2 = rubleToDollar(in2);
+        boolean passed2 = expected2 == out2;
+        System.out.println("120 rubles are 2. Test result : " + passed);
     }
 }
