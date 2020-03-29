@@ -15,5 +15,6 @@ public class ConverterTest {
 
     @Test
     public void rubleToDollar() {
+
     }
 }
